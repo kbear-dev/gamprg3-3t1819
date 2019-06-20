@@ -1,0 +1,448 @@
+fileFormatVersion: 2
+guid: a500a8d0c9d12d04da9841a9e4a4fc82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5101246147307515348
+    second: TrialsOfTheZodiac_Src_0
+  - first:
+      213: 2066599822773797143
+    second: TrialsOfTheZodiac_Src_1
+  - first:
+      213: -1537178695944132278
+    second: TrialsOfTheZodiac_Src_2
+  - first:
+      213: 3556738666320352439
+    second: TrialsOfTheZodiac_Src_3
+  - first:
+      213: 7289089527647563705
+    second: TrialsOfTheZodiac_Src_4
+  - first:
+      213: -4390549779688077580
+    second: TrialsOfTheZodiac_Src_5
+  - first:
+      213: 8485405730461098474
+    second: TrialsOfTheZodiac_Src_6
+  - first:
+      213: 1284042463686783493
+    second: TrialsOfTheZodiac_Src_7
+  - first:
+      213: 6386432600451038253
+    second: TrialsOfTheZodiac_Src_8
+  - first:
+      213: -1958889559536849389
+    second: TrialsOfTheZodiac_Src_9
+  - first:
+      213: 8958781059179113703
+    second: TrialsOfTheZodiac_Src_10
+  - first:
+      213: 82840938534826819
+    second: TrialsOfTheZodiac_Src_11
+  - first:
+      213: 8125459640625455570
+    second: TrialsOfTheZodiac_Src_12
+  - first:
+      213: -3561051067424131847
+    second: TrialsOfTheZodiac_Src_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea250196289768e40995932b567a6caa
+      internalID: -5101246147307515348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66a829bf55ee5f48a3a6930dd4e271f
+      internalID: 2066599822773797143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d8bedac62a0ae45b221e9e7391f464
+      internalID: -1537178695944132278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fead8eb04ef1ff47b77ce73ebf3f517
+      internalID: 3556738666320352439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a040cdf67bda05a458eebafdf1b25800
+      internalID: 7289089527647563705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c85c226b3e3dc349aa6e841d3201d63
+      internalID: -4390549779688077580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e11241f3c9d744f8030d0eb32e5de3
+      internalID: 8485405730461098474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c4f9201f897c641bc359d9287197da
+      internalID: 1284042463686783493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c22e2472407f34bb011b1520f8abc8
+      internalID: 6386432600451038253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428e57a08759fc74a8ba7df5b47240a4
+      internalID: -1958889559536849389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea83102dd3f5ce4e8cdfe261ab5bcbc
+      internalID: 8958781059179113703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_11
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b7c69adb346154e9d17fdc26d1ab57
+      internalID: 82840938534826819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abeabb1c477cf447bf40450f16fad73
+      internalID: 8125459640625455570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrialsOfTheZodiac_Src_13
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca56d6ff73b31d1439f9426c343b48e5
+      internalID: -3561051067424131847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 011e66a85b1ec1e4cac5b765fc3a2c58
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
