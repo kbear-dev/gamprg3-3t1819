@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardDrop: {fileID: 829818677878038780, guid: dde6d8963c246bc47b0a89f20c7b2fb7, type: 3}
-  ProjectileSpeed: 5
+  ProjectileSpeed: 10
   Damage: 1
 --- !u!212 &7893351467891448290
 SpriteRenderer:
