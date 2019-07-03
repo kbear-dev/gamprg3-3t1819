@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class BasicDamage : Card
 {
-    public int Damage;
-    public override void DoEffect(Enemy target)
+    public override IEnumerator DoEffect(Collision2D collision)
     {
-        Health health = target.GetComponent<Health>();
+        Health health = collision.collider.GetComponent<Health>();
         if (health != null) health.TakeDamage(Damage);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Enemy enemy = collision.collider.GetComponent<Enemy>();
-        if (enemy != null) DoEffect(enemy);
-        DropCard();
-        Destroy(gameObject);
+        yield return null;
+        StartCoroutine(base.DoEffect(collision));
     }
 }

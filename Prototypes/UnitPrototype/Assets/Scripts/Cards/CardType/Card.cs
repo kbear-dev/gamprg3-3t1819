@@ -6,6 +6,7 @@ public abstract class Card : MonoBehaviour
 {
     public CardDrop CardDrop;
     public float ProjectileSpeed;
+    public int Damage;
 
     public void Update()
     {
@@ -17,5 +18,15 @@ public abstract class Card : MonoBehaviour
         if(CardDrop!= null) Instantiate(CardDrop, transform.position, Quaternion.identity);
     }
 
-    public abstract void DoEffect(Enemy target);
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine(DoEffect(collision));
+    }
+
+    public virtual IEnumerator DoEffect(Collision2D collision)
+    {
+        yield return null;
+        DropCard();
+        Destroy(gameObject);
+    }
 }
