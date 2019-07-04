@@ -8,6 +8,8 @@ public abstract class Card : MonoBehaviour
     public float ProjectileSpeed;
     public int Damage;
 
+    protected virtual IEnumerator OnEffect(Collision2D collision) { yield break; }
+
     public void Update()
     {
         transform.Translate(ProjectileSpeed * Time.deltaTime, 0, 0);
@@ -20,13 +22,15 @@ public abstract class Card : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(DoEffect(collision));
+        StartCoroutine(HandleCollision(collision));
     }
 
-    public virtual IEnumerator DoEffect(Collision2D collision)
+    IEnumerator HandleCollision(Collision2D collision)
     {
+        yield return StartCoroutine(OnEffect(collision));
         yield return null;
         DropCard();
         Destroy(gameObject);
     }
+
 }

@@ -13,11 +13,10 @@ public class BasicFire : Card
         AOECollider.enabled = false;
     }
 
-    public override IEnumerator DoEffect(Collision2D collision)
+    protected override IEnumerator OnEffect(Collision2D collision)
     {
         AOECollider.enabled = true;
         yield return null;
-        StartCoroutine(base.DoEffect(collision));
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision)
