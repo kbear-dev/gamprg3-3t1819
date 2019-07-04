@@ -38,7 +38,12 @@ public abstract class Unit : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         health.TakeDamage(dmg);
-        StartCoroutine(Flicker(Color.red, 2.0f));
+        StartCoroutine(Flicker(gameObject, Color.red, 2.0f));
+    }
+
+    public void SetMoveSpeed(float speed)
+    {
+        moveSpeed = speed;
     }
 
     // if unit is dead
@@ -48,19 +53,19 @@ public abstract class Unit : MonoBehaviour
     }
 
     #region UX STUFF
-    protected IEnumerator Flicker(Color flickerColor, float timer)
+    protected IEnumerator Flicker(GameObject gO, Color flickerColor, float timer)
     {
         float t = timer;
 
-        GetComponent<SpriteRenderer>().color = flickerColor;
+        gO.GetComponent<SpriteRenderer>().color = flickerColor;
         while (t > 0)
         {
             t--;
             yield return new WaitForSeconds(0.1f);
         }
-        GetComponent<SpriteRenderer>().color = Color.white;
+        gO.GetComponent<SpriteRenderer>().color = Color.white;
 
-        StopCoroutine("DamageFlicker");
+        StopCoroutine("Flicker");
     }
     #endregion
 }

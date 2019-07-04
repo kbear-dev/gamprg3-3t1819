@@ -23,9 +23,10 @@ public class Health : MonoBehaviour
         currentHP -= dmg;
     }
 
-    public float GetHpPercentage()
+    public float GetHpPercentage(bool isDecimal)
     {
-        return (float)currentHP / maxHP * 100f;
+        float result = (float)currentHP / maxHP;
+        return isDecimal ? result : result * 100f;
     }
 
     public void SetHP(int hp)

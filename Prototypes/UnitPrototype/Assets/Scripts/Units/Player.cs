@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : Unit
 {
+    public Image HealthGUI;
+
     protected override void Start()
     {
         base.Start();
@@ -12,6 +15,9 @@ public class Player : Unit
     protected override void Update()
     {
         base.Update();
+
+        HealthGUI.fillAmount = health.GetHpPercentage(true);
+
         if (isDead()) Destroy(gameObject);
     }
     

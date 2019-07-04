@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy : Unit
 {
+    // random movement
+    [HideInInspector]
     public Vector2 RandomMoveBounds;
     private Vector3 targetPosition;
 
     protected override void Start()
     {
         base.Start();
-        SetTargetPosition(GetRandomLocation());
+        SetAISpeed(moveSpeed);
     }
 
     protected override void Update()
@@ -19,17 +22,33 @@ public class Enemy : Unit
         if (isDead()) Destroy(gameObject);
     }
 
-    protected override void Move()
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
-        RandomMove();
+        isHitByCard(collision);
+    }
+
+    protected virtual void isHitByCard(Collision2D collision)
+    {
+        if (collision.collider.gameObject.GetComponent<Card>() != null)
+        {
+            StartCoroutine(Flicker(gameObject, Color.red, 2.0f));
+        }
+    }
+
+    public void SetAISpeed(float moveSpeed)
+    {
+        GetComponent<AIPath>().maxSpeed = moveSpeed;
     }
 
     private void OnDrawGizmos()
     {
+        // random movement gizmos
+        /*
         Gizmos.color = Color.white;
         Gizmos.DrawWireCube(Vector3.zero, new Vector3(RandomMoveBounds.x, RandomMoveBounds.y, 0));
         Gizmos.DrawLine(transform.position, targetPosition);
         Gizmos.DrawWireSphere(targetPosition, 0.5f);
+        */
     }
 
 #region RANDOMIZED MOVEMENT
