@@ -5,6 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int maxHP { get; private set; }
+
+    [SerializeField]
     public int currentHP { get; private set; }
 
     public void Heal(int heal)
