@@ -13,6 +13,7 @@ public class Ranger : Enemy
 
     private bool isTargetInRange;
     private AIPath ai;
+    private Coroutine shootCoroutine;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -21,6 +22,8 @@ public class Ranger : Enemy
 
         isTargetInRange = false;
         ai = GetComponent<AIPath>();
+
+        
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class Ranger : Enemy
         {
             isTargetInRange = true;
             SetAISpeed(0.0f);
-            StartCoroutine(ShootTarget());
+            shootCoroutine = StartCoroutine(ShootTarget());
         }
     }
 
@@ -50,7 +53,7 @@ public class Ranger : Enemy
         {
             isTargetInRange = false;
             SetAISpeed(moveSpeed);
-            StopCoroutine(ShootTarget());
+            StopCoroutine(shootCoroutine);
         }
     }
 

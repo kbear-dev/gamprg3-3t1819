@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuffApplier : Card
+public class BuffApplier : ThrowingCard
 {
     public Buff Buff;
 
@@ -15,6 +15,7 @@ public class BuffApplier : Card
     {
         Enemy enemy = collision.collider.GetComponent<Enemy>();
         if (enemy == null) yield break;
+        enemy.health.TakeDamage(Damage);
         enemy.GetComponent<BuffManager>().Register(Buff);
         yield return null;
     }

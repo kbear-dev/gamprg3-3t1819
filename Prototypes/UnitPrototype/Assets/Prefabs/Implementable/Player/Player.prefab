@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7423346908232037465}
   - component: {fileID: 7908451114084533765}
   - component: {fileID: 7423346908232037464}
+  - component: {fileID: -1117279677385992019}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -178,6 +179,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Deck: {fileID: 0}
   ProjectileSpawn: {fileID: 7423346909182266136}
+--- !u!114 &-1117279677385992019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423346908232037471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6039d0f1bcf434d96ff9881f2b8f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7423346909182266137
 GameObject:
   m_ObjectHideFlags: 0

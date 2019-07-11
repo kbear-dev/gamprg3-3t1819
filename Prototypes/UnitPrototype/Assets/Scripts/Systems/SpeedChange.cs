@@ -7,7 +7,6 @@ public class SpeedChange : Buff
 {
     public float SlowStrength = 0;
     public float duration;
-
     private float originalSpeed;
 
     public override IEnumerator Effect()

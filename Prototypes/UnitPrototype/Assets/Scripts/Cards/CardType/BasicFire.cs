@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicFire : Card
+public class BasicFire : ThrowingCard
 {
 
     private CircleCollider2D AOECollider;

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d9c538c00e5c94899f869674f549a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Target: {fileID: 0}
   CardDrop: {fileID: 829818677878038780, guid: dde6d8963c246bc47b0a89f20c7b2fb7, type: 3}
   ProjectileSpeed: 10
   Damage: 1
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4390549779688077580, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
+  m_Sprite: {fileID: -5101246147307515348, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
