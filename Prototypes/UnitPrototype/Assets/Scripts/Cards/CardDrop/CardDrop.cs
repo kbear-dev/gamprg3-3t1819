@@ -11,7 +11,7 @@ public class CardDrop : MonoBehaviour
         Player player = collision.collider.GetComponent<Player>();
         if (player != null)
         {
-            player.GetComponent<CardThrow>().Card = Pickup;
+            player.GetComponent<CardThrow>().Deck.AddCard(Pickup);
             Destroy(gameObject);
         }
     }

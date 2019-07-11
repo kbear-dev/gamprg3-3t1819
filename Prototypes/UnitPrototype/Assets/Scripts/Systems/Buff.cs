@@ -7,10 +7,14 @@ public class OnBuffEnded :UnityEvent<Buff> { }
 public abstract class Buff : MonoBehaviour
 {
     [HideInInspector] public OnBuffEnded buffEnded = new OnBuffEnded();
+    public Unit Target;
 
-    public abstract IEnumerator Effect(Unit target);
-    public void DestroyBuff()
+    public abstract IEnumerator Effect();
+    protected abstract IEnumerator Cleanup();
+    public IEnumerator DestroyBuff()
     {
+        yield return StartCoroutine(Cleanup());
+        yield return null;
         Destroy(gameObject);
     }
 }

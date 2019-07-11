@@ -8,15 +8,21 @@ public class SpeedChange : Buff
     public float SlowStrength = 0;
     public float duration;
 
-    public override IEnumerator Effect(Unit target)
+    private float originalSpeed;
+
+    public override IEnumerator Effect()
     {
-        AIPath path = target.GetComponent<AIPath>();
-        if (path != null)
-        {
-            path.maxSpeed -= SlowStrength;
-            yield return new WaitForSeconds(duration);
-            path.maxSpeed += SlowStrength;
-        }
+        originalSpeed = Target.BaseMoveSpeed;
+        Target.GetComponent<Enemy>().SetAISpeed(originalSpeed + SlowStrength);
+        yield return new WaitForSeconds(duration);
+        //StartCoroutine(Cleanup());
         buffEnded.Invoke(this);
+    }
+
+    protected override IEnumerator Cleanup()
+    {
+        Target.GetComponent<Enemy>().SetAISpeed(originalSpeed);
+        //Debug.Log("Cleaning up");
+        yield return null;
     }
 }

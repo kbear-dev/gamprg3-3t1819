@@ -10,6 +10,12 @@ public class BuffManager : MonoBehaviour
     public void Register(Buff buff)
     {
         if(!buffs.Contains(buff)) buffs.Add(buff);
+        else
+        {
+            Remove(buff);
+            buffs.Add(buff);
+        }
+        buff = Instantiate(buff, transform);
         buff.buffEnded.AddListener(Remove);
         ApplyBuff(buff);
     }
@@ -17,7 +23,8 @@ public class BuffManager : MonoBehaviour
     public void Remove(Buff buff)
     {
         buffs.RemoveAll(s => s == buff);
-        buff.DestroyBuff();
+        //Debug.Log("removing buff");
+        StartCoroutine(buff.DestroyBuff());
     }
 
     public void ClearAllBuffs()
@@ -28,7 +35,8 @@ public class BuffManager : MonoBehaviour
 
     void ApplyBuff(Buff buff)
     {
-        StartCoroutine(buff.Effect(GetComponent<Unit>()));
+        buff.Target = GetComponent<Unit>();
+        StartCoroutine(buff.Effect());
     }
 
     private void OnDestroy()

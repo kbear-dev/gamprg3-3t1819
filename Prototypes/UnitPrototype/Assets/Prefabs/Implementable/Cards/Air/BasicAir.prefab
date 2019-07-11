@@ -141,8 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0601e2281dc77a642abfdb31c370e3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardDrop: {fileID: 0}
-  ProjectileSpeed: 5
+  CardDrop: {fileID: 41091387973423783, guid: ffde5dc75a078734eaae3d179dd433d7, type: 3}
+  ProjectileSpeed: 10
   Damage: 1
-  SlowStrength: 2
-  duration: 3
+  Buff: {fileID: 3632670077490259961, guid: 38ef63d14b3f81445a55d75ace5f3f38, type: 3}

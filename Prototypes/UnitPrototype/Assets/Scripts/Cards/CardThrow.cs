@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class CardThrow : MonoBehaviour
 {
-    public Card Card;
+    //public Card Card;
+    public Deck Deck;
     public Transform ProjectileSpawn;
     void Update()
     {
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, GetMouseRotation()));
         if (Input.GetMouseButtonDown(0))
-            if (Card != null) ThrowCard();
+            if (Deck.GetCurrentCard() != null) ThrowCard();
     }
 
     void ThrowCard()
     {
-        Instantiate(Card, ProjectileSpawn.position, transform.rotation);
-        Card = null;
+        Card toThrow = Deck.GetCurrentCard();
+        Instantiate(toThrow, ProjectileSpawn.position, transform.rotation);
+        Deck.RemoveCard();
     }
 
     float GetMouseRotation()
