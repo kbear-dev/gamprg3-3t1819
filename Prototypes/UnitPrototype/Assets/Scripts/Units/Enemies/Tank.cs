@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[SerializeField]
 public class Tank : Enemy
 {
     public GameObject Barrier;
@@ -18,9 +17,11 @@ public class Tank : Enemy
 
     protected override void Update()
     {
+        base.Update();
+
         if (barrier <= 0)
         {
-            Destroy(Barrier);
+            if (Barrier != null) Destroy(Barrier);
             SetAISpeed(2.0f);
         }
     }
