@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public float ProjectileVelocity;
 
-    public Transform t;
+    public Transform t { get; protected set; } 
 
     // Start is called before the first frame update
     protected virtual void Start()

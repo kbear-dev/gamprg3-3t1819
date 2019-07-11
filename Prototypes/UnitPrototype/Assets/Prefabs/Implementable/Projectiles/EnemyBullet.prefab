@@ -94,8 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d0f067ba4a91440932c4fbd94cd797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileVelocity: 10
-  t: {fileID: 0}
+  ProjectileVelocity: 5
   BulletDamage: 1
 --- !u!50 &8998718933091765546
 Rigidbody2D:
