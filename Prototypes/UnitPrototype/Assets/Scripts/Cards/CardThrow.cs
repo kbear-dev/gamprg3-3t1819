@@ -10,6 +10,11 @@ public class CardThrow : MonoBehaviour
 
     private bool canShoot;
 
+    private void Start()
+    {
+        canShoot = true;
+    }
+
     void Update()
     {
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, GetMouseRotation()));
