@@ -13,7 +13,7 @@ public class BasicFire : ThrowingCard
         AOECollider.enabled = false;
     }
 
-    protected override IEnumerator OnEffect(Collision2D collision)
+    protected override IEnumerator OnEffect()
     {
         AOECollider.enabled = true;
         yield return null;
@@ -26,7 +26,7 @@ public class BasicFire : ThrowingCard
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.GetComponent<Enemy>();
-        if(enemy != null) enemy.GetComponent<Health>().TakeDamage(Damage);
+        if (Target == null) return;
+        Target.health.TakeDamage(Damage);
     }
 }

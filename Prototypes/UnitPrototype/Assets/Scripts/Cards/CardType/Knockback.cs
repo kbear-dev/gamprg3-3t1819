@@ -6,11 +6,11 @@ public class Knockback : ThrowingCard
 {
     public float KnockbackStrength;
 
-    protected override IEnumerator OnEffect(Collision2D collision)
+    protected override IEnumerator OnEffect()
     {
-        //if (!collision.collider.GetComponent<Unit>()) yield break;
-        Vector2 direction = collision.transform.position - transform.position;
-        collision.collider.GetComponent<Rigidbody2D>().AddForce(transform.right * KnockbackStrength);
+        if (Target == null) yield break;
+        Vector2 direction = Target.transform.position - transform.position;
+        Target.GetComponent<Rigidbody2D>().AddForce(transform.right * KnockbackStrength);
         yield return null;
     }
 }

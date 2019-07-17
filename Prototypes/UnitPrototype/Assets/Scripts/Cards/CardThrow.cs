@@ -17,7 +17,9 @@ public class CardThrow : MonoBehaviour
     void ThrowCard()
     {
         Card toThrow = Deck.GetCurrentCard();
-        Instantiate(toThrow, ProjectileSpawn.position, transform.rotation);
+        Vector3 newRot = transform.rotation.eulerAngles;
+        //newRot.z -= 90;
+        Instantiate(toThrow, ProjectileSpawn.position, Quaternion.Euler(newRot));
         Deck.RemoveCard();
     }
 

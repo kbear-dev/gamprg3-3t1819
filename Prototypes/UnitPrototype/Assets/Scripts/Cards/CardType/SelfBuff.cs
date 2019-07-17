@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class SelfBuff : Card
 {
+    public Buff Buff;
     // Start is called before the first frame update
     void Start()
     {
         //StartCoroutine(OnEffect(Target));
     }
 
-    protected override IEnumerator OnEffect(Collision2D collision)
+    protected override IEnumerator OnEffect()
     {
-        return base.OnEffect(collision);
+        Caster.GetComponent<BuffManager>().Register(Buff);
+        yield return null;
     }
 }

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BasicDamage : ThrowingCard
 {
-    protected override IEnumerator OnEffect(Collision2D collision)
+    protected override IEnumerator OnEffect()
     {
-        Health health = collision.collider.GetComponent<Health>();
+        if (Target == null) yield break;
+        Health health = Target.health;
         if (health != null) health.TakeDamage(Damage);
         yield return null;
     }

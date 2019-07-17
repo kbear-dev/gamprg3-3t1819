@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class ThrowingCard : Card
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(ProjectileSpeed * Time.deltaTime, 0, 0);
@@ -18,12 +11,13 @@ public class ThrowingCard : Card
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(HandleCollision(collision));
+        Target = collision.collider.GetComponent<Unit>();
+        StartCoroutine(HandleCollision());
     }
 
-    IEnumerator HandleCollision(Collision2D collision)
+    IEnumerator HandleCollision()
     {
-        yield return StartCoroutine(OnEffect(collision));
+        yield return StartCoroutine(OnEffect());
         yield return null;
         DropCard();
         Destroy(gameObject);
