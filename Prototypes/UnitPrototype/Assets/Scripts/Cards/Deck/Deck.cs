@@ -7,12 +7,6 @@ public class Deck : MonoBehaviour
 {
     public List<Card> Cards = new List<Card>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public Card GetCurrentCard()
     {
         if (Cards.Count == 0) return null;
