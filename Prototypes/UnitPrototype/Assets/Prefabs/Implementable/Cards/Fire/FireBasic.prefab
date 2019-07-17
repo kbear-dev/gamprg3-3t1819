@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5101246147307515348, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
+  m_Sprite: {fileID: -1537178695944132278, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
     type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98da2516593500d459ffcf7f1f603372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Caster: {fileID: 0}
   Target: {fileID: 0}
   CardDrop: {fileID: 7319726067661433042, guid: 8feac021d04a2bc4c95bfe3234d198b6,
     type: 3}

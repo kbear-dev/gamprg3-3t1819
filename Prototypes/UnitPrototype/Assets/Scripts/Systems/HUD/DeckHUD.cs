@@ -5,50 +5,31 @@ using UnityEngine.UI;
 
 public class DeckHUD : MonoBehaviour
 {
-    public RectTransform selector;
-    public List<RectTransform> slots;
+    public Image slot;
+    public Deck deck;
 
     public Sprite EmptyCardSprite;
-
-    private int selectedSlot;
 
     // Start is called before the first frame update
     void Start()
     {
-        selectedSlot = 0;
-        selector.position = slots[selectedSlot].position;
+        ChangeCard(deck.GetCurrentCard());
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChangeSelectorPosition();
+        ChangeCard(deck.GetCurrentCard());
     }
 
-    private void ChangeSelectorPosition ()
+    private void ChangeCard(Card currentCard)
     {
-        if (Input.mouseScrollDelta.y > 0)
+        if (currentCard == null)
         {
-            if (selectedSlot == slots.Count - 1)
-            {
-                selectedSlot = 0;
-                return;
-            }
-
-            selectedSlot++;
-            
-        }
-        else if (Input.mouseScrollDelta.y < 0)
-        {
-           if (selectedSlot == 0)
-            {
-                selectedSlot = slots.Count - 1;
-                return;
-            }
-
-            selectedSlot--;
+            slot.sprite = EmptyCardSprite;
+            return;
         }
 
-        selector.position = slots[selectedSlot].position;
+        slot.sprite = currentCard.GetComponent<SpriteRenderer>().sprite;
     }
 }

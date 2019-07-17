@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Player : Unit
 {
     public Image HealthGUI;
+
+    public UnityEvent OnDeath;
 
     protected override void Start()
     {
@@ -18,7 +21,11 @@ public class Player : Unit
 
         HealthGUI.fillAmount = health.GetHpPercentage(true);
 
-        if (isDead()) Destroy(gameObject);
+        if (isDead())
+        {
+            OnDeath.Invoke();
+            Destroy(gameObject);
+        }
     }
     
     protected override void Move()
