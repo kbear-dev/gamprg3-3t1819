@@ -7,10 +7,13 @@ public class CardThrow : MonoBehaviour
     //public Card Card;
     public Deck Deck;
     public Transform ProjectileSpawn;
+
+    private bool canShoot;
+
     void Update()
     {
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, GetMouseRotation()));
-        if (Input.GetMouseButtonDown(0))
+        if (canShoot && Input.GetMouseButtonDown(0))
             if (Deck.GetCurrentCard() != null) ThrowCard();
     }
 
@@ -29,5 +32,15 @@ public class CardThrow : MonoBehaviour
         Vector2 relativePosition = mousePosition - transform.position;
         float angle = Mathf.Atan2(relativePosition.y, relativePosition.x) * Mathf.Rad2Deg; Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return angle;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<CardChest>()) canShoot = false;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<CardChest>()) canShoot = true;
     }
 }
