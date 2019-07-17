@@ -4,12 +4,13 @@ using UnityEngine;
 
 public abstract class Card : MonoBehaviour
 {
-    public Unit Target;
+    [HideInInspector] public Unit Caster;
+    [HideInInspector] public Unit Target;
     public CardDrop CardDrop;
     public float ProjectileSpeed;
     public int Damage;
 
-    protected virtual IEnumerator OnEffect(Collision2D collision) { yield break; }
+    protected virtual IEnumerator OnEffect() { yield break; }
 
     protected void DropCard()
     {
