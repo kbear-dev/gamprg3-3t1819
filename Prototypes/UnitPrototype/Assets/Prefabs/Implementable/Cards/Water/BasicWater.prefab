@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7057874853598168939}
   - component: {fileID: 7057874853598168938}
   - component: {fileID: 7057874853598168917}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BasicWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,5 +146,5 @@ MonoBehaviour:
   Target: {fileID: 0}
   CardDrop: {fileID: 567114530702370251, guid: d0b673d59f36bca4b9a5bfd347d60027, type: 3}
   ProjectileSpeed: 10
-  Damage: 1
+  Damage: 2
   Buff: {fileID: 5288376802457004197, guid: f5f8e1716d5a65a4e83d90ea8dee688e, type: 3}

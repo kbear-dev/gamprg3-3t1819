@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Events;
 
 public class Enemy : Unit
 {
@@ -10,10 +11,13 @@ public class Enemy : Unit
     public Vector2 RandomMoveBounds;
     private Vector3 targetPosition;
 
+    public UnityEvent OnDeath;
+
     protected override void Start()
     {
         base.Start();
         SetAISpeed(moveSpeed);
+        OnDeath = new UnityEvent();
     }
 
     protected override void Update()
@@ -51,7 +55,12 @@ public class Enemy : Unit
         */
     }
 
-#region RANDOMIZED MOVEMENT
+    private void OnDestroy()
+    {
+        OnDeath.Invoke();
+    }
+
+    #region RANDOMIZED MOVEMENT
     // randomize movement in bounds
     public void RandomMove()
     {

@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 0c167d32c642b124b921264d79372cc5
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Rooms/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/CardTest.unity
+    guid: 29093c5384366b847b3fa61af0f172de
+  - enabled: 1
+    path: Assets/Scenes/Rooms/BossRoom.unity
+    guid: a4dcb9ff2834e344da9dadb615710cde
   m_configObjects: {}

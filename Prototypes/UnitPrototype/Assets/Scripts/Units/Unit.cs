@@ -63,7 +63,9 @@ public abstract class Unit : MonoBehaviour
             t--;
             yield return new WaitForSeconds(0.1f);
         }
-        gO.GetComponent<SpriteRenderer>().color = Color.white;
+
+        if (gO != null)
+            gO.GetComponent<SpriteRenderer>().color = Color.white;
 
         StopCoroutine("Flicker");
     }

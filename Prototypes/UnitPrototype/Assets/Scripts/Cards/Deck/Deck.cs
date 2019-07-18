@@ -42,6 +42,8 @@ public class Deck : MonoBehaviour
 
             selectedCard--;
         }
+
+        Cards.RemoveAll(c => c == null);
     }
 
     public Card GetCurrentCard()
@@ -54,6 +56,7 @@ public class Deck : MonoBehaviour
     {
         Cards.Remove(Cards[selectedCard]);
         selectedCard = 0;
+        Cards.TrimExcess();
     }
 
     public void AddCard(Card toAdd)
