@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ThrowingCard : Card
 {
+    public float ProjectileSpeed;
+    public int Damage;
+    public CardDrop CardDrop;
+
     void Update()
     {
         transform.Translate(ProjectileSpeed * Time.deltaTime, 0, 0);
@@ -22,4 +26,10 @@ public class ThrowingCard : Card
         DropCard();
         Destroy(gameObject);
     }
+    protected void DropCard()
+    {
+        if (CardDrop != null)
+            Instantiate(CardDrop, transform.position, Quaternion.identity);
+    }
+
 }

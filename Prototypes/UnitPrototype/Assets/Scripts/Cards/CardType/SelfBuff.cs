@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SelfBuff : Card
 {
+    public Card Card;
     public Buff Buff;
-    // Start is called before the first frame update
+
     void Start()
     {
-        //StartCoroutine(OnEffect(Target));
+        StartCoroutine(OnEffect());
     }
 
     protected override IEnumerator OnEffect()
     {
+        Target = Caster;
+        //Card toAdd = Instantiate(Card);
+        //Caster.GetComponent<CardThrow>().Deck.AddCard(toAdd);
         Caster.GetComponent<BuffManager>().Register(Buff);
         yield return null;
     }

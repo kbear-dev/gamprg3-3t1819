@@ -1426,6 +1426,17 @@ PrefabInstance:
       propertyPath: HealthGUI
       value: 
       objectReference: {fileID: 1683007672}
+    - target: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
+        type: 3}
+      propertyPath: Cards.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
+        type: 3}
+      propertyPath: Cards.Array.data[0]
+      value: 
+      objectReference: {fileID: 3389646886628586634, guid: 992b689a16ba4ed41a493b2ee787473a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5797067b3cfd0274bb55548312794ec3, type: 3}
 --- !u!1 &1113809914
