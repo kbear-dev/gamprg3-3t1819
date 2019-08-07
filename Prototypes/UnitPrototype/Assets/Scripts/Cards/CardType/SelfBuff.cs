@@ -7,7 +7,7 @@ public class SelfBuff : Card
     public Card Card;
     public Buff Buff;
 
-    void Start()
+    public override void OnThrow()
     {
         StartCoroutine(OnEffect());
     }
@@ -15,9 +15,9 @@ public class SelfBuff : Card
     protected override IEnumerator OnEffect()
     {
         Target = Caster;
-        //Card toAdd = Instantiate(Card);
-        //Caster.GetComponent<CardThrow>().Deck.AddCard(toAdd);
+
         Caster.GetComponent<BuffManager>().Register(Buff);
         yield return null;
+        Caster.GetComponent<CardThrow>().Deck.PoolCard(this);
     }
 }

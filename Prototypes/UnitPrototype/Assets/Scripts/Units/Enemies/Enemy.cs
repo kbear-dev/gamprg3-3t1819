@@ -16,7 +16,7 @@ public class Enemy : Unit
     protected override void Start()
     {
         base.Start();
-        SetAISpeed(moveSpeed);
+        SetMoveSpeed(moveSpeed);
         OnDeath = new UnityEvent();
     }
 
@@ -37,6 +37,11 @@ public class Enemy : Unit
         {
             StartCoroutine(Flicker(gameObject, Color.red, 2.0f));
         }
+    }
+
+    public override void SetMoveSpeed(float speed)
+    {
+        SetAISpeed(speed);
     }
 
     public void SetAISpeed(float moveSpeed)

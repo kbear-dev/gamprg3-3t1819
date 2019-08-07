@@ -21,16 +21,29 @@ public class CardThrow : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, GetMouseRotation()));
         if (canShoot && Input.GetMouseButtonDown(0))
-            if (Deck.GetCurrentCard() != null) ThrowCard();
+            if (Deck.GetCard() != null) StartCoroutine(ThrowCard());
     }
 
-    void ThrowCard()
+    IEnumerator ThrowCard()
     {
-        Card toThrow = Deck.GetCurrentCard();
+        Card toThrow = Deck.GetCard();
+
+        if (toThrow == null)
+        {
+            //yield return Instantiate(toThrow, ProjectileSpawn.position, Quaternion.Euler(newRot));
+            toThrow = Instantiate(toThrow);
+            Deck.AddCard(toThrow);
+        }
+
+        toThrow.Caster = GetComponent<Unit>();
         Vector3 newRot = transform.rotation.eulerAngles;
-        //newRot.z -= 90;
-        Instantiate(toThrow, ProjectileSpawn.position, Quaternion.Euler(newRot));
-        Deck.RemoveCard();
+
+        toThrow.transform.position = ProjectileSpawn.position;
+        toThrow.transform.rotation = Quaternion.Euler(newRot);
+
+
+        toThrow.OnThrow();
+        yield return null;
     }
 
     float GetMouseRotation()
