@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6964149471989042377}
   - component: {fileID: 6964149471989042383}
   - component: {fileID: 1670183253617686667}
+  - component: {fileID: 3580498341894603092}
   m_Layer: 12
   m_Name: BasicEnemy
   m_TagString: Untagged
@@ -54,6 +55,11 @@ MonoBehaviour:
   BaseHP: 2
   BaseMoveSpeed: 3
   RandomMoveBounds: {x: 15.42, y: 7.33}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &6964149471989042379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +110,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0625, y: 1.0625}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.0625, y: 1.0625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -150,7 +156,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3561051067424131847, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
+  m_Sprite: {fileID: -1813060340400320405, guid: ac6b59ac95655f94f88e891dc53e3aae,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -252,3 +258,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6039d0f1bcf434d96ff9881f2b8f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3580498341894603092
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964149471989042374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfeb077dcf6c3e042bd2e92e16bc0609, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
