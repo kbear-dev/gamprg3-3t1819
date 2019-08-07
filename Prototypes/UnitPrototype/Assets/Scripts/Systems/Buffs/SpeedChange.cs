@@ -5,14 +5,14 @@ using Pathfinding;
 
 public class SpeedChange : Buff
 {
-    public float SlowStrength = 0;
+    public float SpdStr = 0;
     public float duration;
     private float originalSpeed;
 
     public override IEnumerator Effect()
     {
         originalSpeed = Target.BaseMoveSpeed;
-        Target.GetComponent<Enemy>().SetAISpeed(originalSpeed + SlowStrength);
+        Target.GetComponent<Unit>().SetMoveSpeed(originalSpeed + SpdStr);
         yield return new WaitForSeconds(duration);
         //StartCoroutine(Cleanup());
         buffEnded.Invoke(this);
@@ -20,7 +20,7 @@ public class SpeedChange : Buff
 
     protected override IEnumerator Cleanup()
     {
-        Target.GetComponent<Enemy>().SetAISpeed(originalSpeed);
+        Target.GetComponent<Unit>().SetMoveSpeed(originalSpeed);
         //Debug.Log("Cleaning up");
         yield return null;
     }

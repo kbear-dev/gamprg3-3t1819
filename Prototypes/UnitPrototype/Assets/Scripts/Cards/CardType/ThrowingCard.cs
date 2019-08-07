@@ -8,9 +8,17 @@ public class ThrowingCard : Card
     public int Damage;
     public CardDrop CardDrop;
 
+    private bool canMove;
+
     void Update()
     {
+        if(canMove)
         transform.Translate(ProjectileSpeed * Time.deltaTime, 0, 0);
+    }
+
+    public override void OnThrow()
+    {
+        canMove = true;
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)

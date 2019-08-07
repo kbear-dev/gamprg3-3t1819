@@ -41,7 +41,7 @@ public abstract class Unit : MonoBehaviour
         StartCoroutine(Flicker(gameObject, Color.red, 2.0f));
     }
 
-    public void SetMoveSpeed(float speed)
+    public virtual void SetMoveSpeed(float speed)
     {
         moveSpeed = speed;
     }
