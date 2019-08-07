@@ -17,6 +17,8 @@ public class CardThrow : MonoBehaviour
 
     void Update()
     {
+        if (MenuManager.isPaused) return;
+
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, GetMouseRotation()));
         if (canShoot && Input.GetMouseButtonDown(0))
             if (Deck.GetCurrentCard() != null) ThrowCard();
