@@ -80,4 +80,9 @@ public class Deck : MonoBehaviour
     {
         Cards.Add(toAdd);
     }
+
+    public void RemoveCurrentCard()
+    {
+        Cards.Remove(Cards[selectedCard]);
+    }
 }
