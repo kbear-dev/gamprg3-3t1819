@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3725782757831260959}
   - component: {fileID: 3725782757831260960}
   - component: {fileID: 2931576155359480062}
+  - component: {fileID: -4230751223638280494}
   m_Layer: 0
   m_Name: BossEnemy
   m_TagString: Untagged
@@ -55,7 +56,16 @@ MonoBehaviour:
   BaseHP: 10
   BaseMoveSpeed: 0.75
   RandomMoveBounds: {x: 0, y: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   HealthBar: {fileID: 5542084671950121804}
+  isPlayerInRange: 0
+  hasBulletHellStarted: 0
+  BulletHellPatternPrefab: {fileID: 0}
+  FireInterval: 0
 --- !u!114 &3725782757831260954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +263,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6039d0f1bcf434d96ff9881f2b8f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4230751223638280494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3725782757831260963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786fdcb9dc5a8e54f96ffdbe63cf992f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 11400000, guid: 7cfee5f6c9c6c51498b53337674bd54c, type: 2}
 --- !u!1 &4704827732525755696
 GameObject:
   m_ObjectHideFlags: 0
