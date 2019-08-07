@@ -424,6 +424,16 @@ PrefabInstance:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3725782757831260962, guid: c0a5a43fccb068a498580f2008edf586,
+        type: 3}
+      propertyPath: hasBulletHellStarted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725782757831260962, guid: c0a5a43fccb068a498580f2008edf586,
+        type: 3}
+      propertyPath: BaseMoveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7488819105757620048, guid: c0a5a43fccb068a498580f2008edf586,
         type: 3}
       propertyPath: m_Layer
@@ -472,7 +482,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 4
 --- !u!1 &226275618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,7 +5140,7 @@ PrefabInstance:
     - target: {fileID: 7423346908232037468, guid: 5797067b3cfd0274bb55548312794ec3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.59
+      value: 9.04
       objectReference: {fileID: 0}
     - target: {fileID: 7423346908232037468, guid: 5797067b3cfd0274bb55548312794ec3,
         type: 3}

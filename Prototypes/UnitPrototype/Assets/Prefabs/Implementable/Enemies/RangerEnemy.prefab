@@ -56,7 +56,13 @@ MonoBehaviour:
   BaseHP: 2
   BaseMoveSpeed: 3
   RandomMoveBounds: {x: 0, y: 0}
-  BulletPrefab: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  BulletPrefab: {fileID: 8998718933091765544, guid: a00f2c3ce5975054ab163601a0bfa4a0,
+    type: 3}
   ShootingTarget: {fileID: 0}
   FireInterval: 0.5
 --- !u!114 &6806908223244686404

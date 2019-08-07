@@ -19,7 +19,7 @@ public class BossStateHandler : MonoBehaviour
     void Update()
     {
         state.boss = boss;
-        state = (BossState)state.CheckStateChanges();
         state.Act();
+        state = (BossState)state.CheckStateChanges(); 
     }
 }
