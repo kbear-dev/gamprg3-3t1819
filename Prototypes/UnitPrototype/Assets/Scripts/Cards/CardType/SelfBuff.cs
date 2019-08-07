@@ -20,4 +20,9 @@ public class SelfBuff : Card
         yield return null;
         Caster.GetComponent<CardThrow>().Deck.PoolCard(this);
     }
+
+    private void OnEnable()
+    {
+        StartCoroutine(OnEffect());
+    }
 }

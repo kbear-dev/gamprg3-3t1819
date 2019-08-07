@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5738002559424483354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.052518547, w: 0.99862}
+  m_LocalPosition: {x: -5.5338616, y: 0.0734245, z: -2.7279997}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  CardDrop: {fileID: 41091387973423783, guid: ffde5dc75a078734eaae3d179dd433d7, type: 3}
   ProjectileSpeed: 6
   Damage: 1
+  CardDrop: {fileID: 41091387973423783, guid: ffde5dc75a078734eaae3d179dd433d7, type: 3}
   Buff: {fileID: 3632670077490259961, guid: 38ef63d14b3f81445a55d75ace5f3f38, type: 3}
