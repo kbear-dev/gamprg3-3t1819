@@ -41,7 +41,6 @@ public class CardThrow : MonoBehaviour
         Deck.RemoveCurrentCard();
         yield return null;
         toThrow.OnThrow();
-
         yield return null;
     }
 

@@ -14,6 +14,8 @@ public class SelfBuff : Card
 
     protected override IEnumerator OnEffect()
     {
+        GetComponent<SpriteRenderer>().enabled = false;
+
         Target = Caster;
         Buff.Target = Target;
 
@@ -21,9 +23,5 @@ public class SelfBuff : Card
         yield return null;
         Caster.GetComponent<CardThrow>().Deck.AddCard(this);
     }
-
-    //private void OnEnable()
-    //{
-    //    StartCoroutine(OnEffect());
-    //}
 }
+
