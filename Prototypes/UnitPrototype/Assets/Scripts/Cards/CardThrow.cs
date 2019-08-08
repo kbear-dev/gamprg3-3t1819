@@ -7,7 +7,7 @@ public class CardThrow : MonoBehaviour
     //public Card Card;
     public Deck Deck;
     public Transform ProjectileSpawn;
-
+    public Transform Hinge;
     private bool canShoot;
 
     private void Start()
@@ -19,7 +19,7 @@ public class CardThrow : MonoBehaviour
     {
         if (MenuManager.isPaused) return;
 
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, GetMouseRotation()));
+        Hinge.rotation = Quaternion.Euler(new Vector3(0, 0, GetMouseRotation()));
         if (canShoot && Input.GetMouseButtonDown(0))
             if (Deck.GetCurrentCard() != null) StartCoroutine(ThrowCard());
     }
@@ -29,7 +29,7 @@ public class CardThrow : MonoBehaviour
         Card toThrow = Deck.GetCurrentCard();
 
         toThrow.Caster = GetComponent<Unit>();
-        Vector3 newRot = transform.rotation.eulerAngles;
+        Vector3 newRot = Hinge.rotation.eulerAngles;
 
         if(!toThrow.gameObject.activeInHierarchy)
             toThrow = Instantiate(toThrow);

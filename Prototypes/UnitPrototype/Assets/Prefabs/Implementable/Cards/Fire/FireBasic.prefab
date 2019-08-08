@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  CardName: 
+  CardName: SAGITTARIUS
   CardDescription: Damage enemies in an area
   ProjectileSpeed: 10
   Damage: 1

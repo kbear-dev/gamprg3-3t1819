@@ -17,7 +17,6 @@ public class Enemy : Unit
     {
         base.Start();
         SetMoveSpeed(moveSpeed);
-        OnDeath = new UnityEvent();
     }
 
     protected override void Update()
