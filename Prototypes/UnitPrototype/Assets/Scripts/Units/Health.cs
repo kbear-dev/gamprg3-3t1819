@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Health : MonoBehaviour
 
     [SerializeField]
     public int currentHP { get; private set; }
+    public GameObject ShieldSprite;
+
+    public bool isShielded;
 
     public void Heal(int heal)
     {
@@ -21,8 +25,13 @@ public class Health : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         if (currentHP <= 0) return;
-
-        currentHP -= dmg;
+        if(isShielded)
+        {
+            isShielded = false;
+            ShieldSprite.SetActive(false);
+        }
+        else
+            currentHP -= dmg;
     }
 
     public float GetHpPercentage(bool isDecimal)
