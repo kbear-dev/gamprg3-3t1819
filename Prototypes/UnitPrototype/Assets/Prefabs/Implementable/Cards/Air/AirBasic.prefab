@@ -144,6 +144,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
+  CardName: LIBRA
+  CardDescription: 'Slow enemy for 3s
+
+    Damage enemy by 1'
   ProjectileSpeed: 6
   Damage: 1
   CardDrop: {fileID: 41091387973423783, guid: ffde5dc75a078734eaae3d179dd433d7, type: 3}

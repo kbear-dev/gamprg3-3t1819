@@ -144,7 +144,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  CardDrop: {fileID: 567114530702370251, guid: d0b673d59f36bca4b9a5bfd347d60027, type: 3}
+  CardName: CANCER
+  CardDescription: 'Poisons enemy for 3 seconds
+
+    dealing 1 damage'
   ProjectileSpeed: 10
   Damage: 2
+  CardDrop: {fileID: 567114530702370251, guid: d0b673d59f36bca4b9a5bfd347d60027, type: 3}
   Buff: {fileID: 5288376802457004197, guid: f5f8e1716d5a65a4e83d90ea8dee688e, type: 3}

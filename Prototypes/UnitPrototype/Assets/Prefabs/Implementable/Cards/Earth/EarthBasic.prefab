@@ -144,8 +144,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  CardDrop: {fileID: 1649881572361626775, guid: b3663b390a9e681468f4596918bd45ce,
-    type: 3}
+  CardName: TAURUS
+  CardDescription: Deal knockback to enemy
   ProjectileSpeed: 10
   Damage: 1
+  CardDrop: {fileID: 1649881572361626775, guid: b3663b390a9e681468f4596918bd45ce,
+    type: 3}
   KnockbackStrength: 5000

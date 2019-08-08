@@ -161,7 +161,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  CardDrop: {fileID: 7319726067661433042, guid: 8feac021d04a2bc4c95bfe3234d198b6,
-    type: 3}
+  CardName: 
+  CardDescription: Damage enemies in an area
   ProjectileSpeed: 10
   Damage: 1
+  CardDrop: {fileID: 7319726067661433042, guid: 8feac021d04a2bc4c95bfe3234d198b6,
+    type: 3}
