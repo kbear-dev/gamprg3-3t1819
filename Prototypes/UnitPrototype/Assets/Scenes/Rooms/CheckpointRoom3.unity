@@ -16863,11 +16863,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1349347195}
-    - target: {fileID: 7423346908232037464, guid: 5797067b3cfd0274bb55548312794ec3,
-        type: 3}
-      propertyPath: Deck
-      value: 
-      objectReference: {fileID: 1778798875}
     - target: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
         type: 3}
       propertyPath: Cards.Array.size
@@ -16913,7 +16908,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 5797067b3cfd0274bb55548312794ec3, type: 3}
 --- !u!114 &1778798875 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
+  m_CorrespondingSourceObject: {fileID: 99809858991581398, guid: 5797067b3cfd0274bb55548312794ec3,
     type: 3}
   m_PrefabInstance: {fileID: 1778798874}
   m_PrefabAsset: {fileID: 0}
@@ -17268,6 +17263,9 @@ MonoBehaviour:
   - {fileID: 2111828708396511407, guid: 8e4775e8ceb572f43ae343620dad7a07, type: 3}
   - {fileID: 993206335685916937, guid: 0b76a6ad4c6641241a15a216cda9d86c, type: 3}
   - {fileID: 7057874853598168917, guid: 7dea36d26c4da9640bf41fbc9abf37bb, type: 3}
+  - {fileID: 3389646886628586634, guid: 992b689a16ba4ed41a493b2ee787473a, type: 3}
+  - {fileID: 4019913249874961943, guid: 5fc7c50ddeb6a14458026acdef973bd0, type: 3}
+  - {fileID: 5889736995613076923, guid: 4f45d7c84df57d846b443c4d45d2a2c2, type: 3}
   chestSlots:
   - {fileID: 108066037}
   - {fileID: 104235481}

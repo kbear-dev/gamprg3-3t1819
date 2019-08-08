@@ -34,7 +34,6 @@ public class CardThrow : MonoBehaviour
         if(!toThrow.gameObject.activeInHierarchy)
             toThrow = Instantiate(toThrow);
 
-
         toThrow.transform.position = ProjectileSpawn.position;
         toThrow.transform.rotation = Quaternion.Euler(newRot);
 

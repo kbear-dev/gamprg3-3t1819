@@ -13,12 +13,6 @@ public class DeckHUD : MonoBehaviour
 
     public Sprite EmptyCardSprite;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        ChangeCard(deck.GetCurrentCard());
-    }
-
     // Update is called once per frame
     void Update()
     {

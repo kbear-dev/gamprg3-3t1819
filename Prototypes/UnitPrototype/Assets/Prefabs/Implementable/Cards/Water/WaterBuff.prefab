@@ -70,13 +70,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1958889559536849389, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
-    type: 3}
-  m_Color: {r: 0, g: 0.72599363, b: 1, a: 1}
+  m_Sprite: {fileID: 82840938534826819, guid: a500a8d0c9d12d04da9841a9e4a4fc82, type: 3}
+  m_Color: {r: 0.72958785, g: 0.4764151, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.0625, y: 1.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -117,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  CardName: Pisces
+  CardName: PISCES
   CardDescription: 'Heal for 3 hp.
 
     Gain a shield that blocks 1 damage.'

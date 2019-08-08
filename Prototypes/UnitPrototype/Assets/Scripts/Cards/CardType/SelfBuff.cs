@@ -21,7 +21,8 @@ public class SelfBuff : Card
 
         StartCoroutine(Caster.GetComponent<BuffManager>().Register(Buff));
         yield return null;
-        Caster.GetComponent<CardThrow>().Deck.AddCard(this);
+        //Caster.GetComponent<CardThrow>().Deck.AddCard(this);
+        Caster.GetComponent<CardThrow>().Deck.RemoveCurrentCard();
     }
 }
 

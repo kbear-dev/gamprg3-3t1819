@@ -318,11 +318,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1428903542}
-    - target: {fileID: 7423346908232037464, guid: 5797067b3cfd0274bb55548312794ec3,
-        type: 3}
-      propertyPath: Deck
-      value: 
-      objectReference: {fileID: 92914845}
     - target: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
         type: 3}
       propertyPath: Cards.Array.size
@@ -364,11 +359,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7893351467891448285, guid: a11a156ca6710f24580d13379705fab7,
         type: 3}
+    - target: {fileID: 99809858991581398, guid: 5797067b3cfd0274bb55548312794ec3,
+        type: 3}
+      propertyPath: Cards.Array.data[3]
+      value: 
+      objectReference: {fileID: 4019913249874961943, guid: 5fc7c50ddeb6a14458026acdef973bd0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5797067b3cfd0274bb55548312794ec3, type: 3}
 --- !u!114 &92914845 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
+  m_CorrespondingSourceObject: {fileID: 99809858991581398, guid: 5797067b3cfd0274bb55548312794ec3,
     type: 3}
   m_PrefabInstance: {fileID: 92914844}
   m_PrefabAsset: {fileID: 0}
@@ -6506,7 +6507,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.3879185, y: 9.2112875}
+  m_Offset: {x: 6.3879185, y: 9.586813}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6517,7 +6518,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.633976, y: 1.0708866}
+  m_Size: {x: 2.633976, y: 1.0708847}
   m_EdgeRadius: 0
 --- !u!114 &1423538081
 MonoBehaviour:

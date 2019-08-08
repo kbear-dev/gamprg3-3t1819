@@ -70,9 +70,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1537178695944132278, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
+  m_Sprite: {fileID: 2066599822773797143, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
     type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.34606776, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -117,8 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  CardName: Leo
-  CardDescription: 'Gain a fire shield for 5 seconds.
+  CardName: LEO
+  CardDescription: 'Gain a fire shield for 5s.
 
     Fire shield damages enemies in contact.'
   Card: {fileID: 4019913249874961943}

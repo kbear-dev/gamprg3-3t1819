@@ -44,12 +44,19 @@ public class Deck : MonoBehaviour
         }
 
         Cards.RemoveAll(c => c == null);
+        selectedCard = Mathf.Clamp(selectedCard, 0, Cards.Count - 1);
     }
 
     public Card GetCurrentCard()
     {
         if (Cards.Count == 0) return null;
         return Cards[selectedCard];
+    }
+
+    public void ShiftCurrentCard()
+    {
+        selectedCard--;
+        if (selectedCard < 0) selectedCard = 0;
     }
 
     public void AddCard(Card toAdd)

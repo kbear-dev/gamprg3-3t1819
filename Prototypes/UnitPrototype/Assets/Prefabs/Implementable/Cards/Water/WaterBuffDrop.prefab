@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6028897605676989425
+--- !u!1 &9214081828671870939
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6028897605676989390}
-  - component: {fileID: 6028897605676989424}
-  - component: {fileID: 6028897605676989389}
-  - component: {fileID: 3389646886628586634}
-  m_Layer: 9
-  m_Name: AirBuff
+  - component: {fileID: 9214081828671870887}
+  - component: {fileID: 9214081828671870884}
+  - component: {fileID: 9214081828671870885}
+  - component: {fileID: 9214081828671870938}
+  m_Layer: 0
+  m_Name: WaterBuffDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6028897605676989390
+--- !u!4 &9214081828671870887
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6028897605676989425}
-  m_LocalRotation: {x: 0, y: 0, z: 0.35233587, w: 0.9358736}
-  m_LocalPosition: {x: -0.5480913, y: 3.8588836, z: -2.7279997}
+  m_GameObject: {fileID: 9214081828671870939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.727169, y: -1.106, z: -2.0855703}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6028897605676989424
+--- !u!212 &9214081828671870884
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6028897605676989425}
+  m_GameObject: {fileID: 9214081828671870939}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,9 +70,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3556738666320352439, guid: a500a8d0c9d12d04da9841a9e4a4fc82,
-    type: 3}
-  m_Color: {r: 1, g: 0.8598435, b: 0, a: 1}
+  m_Sprite: {fileID: 82840938534826819, guid: a500a8d0c9d12d04da9841a9e4a4fc82, type: 3}
+  m_Color: {r: 0.72958785, g: 0.4764151, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -82,42 +81,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6028897605676989389
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!61 &9214081828671870885
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6028897605676989425}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GameObject: {fileID: 9214081828671870939}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 2
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!114 &3389646886628586634
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0625, y: 1.0625}
+    newSize: {x: 1.0625, y: 1.0625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0625, y: 1.0625}
+  m_EdgeRadius: 0
+--- !u!114 &9214081828671870938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6028897605676989425}
+  m_GameObject: {fileID: 9214081828671870939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59ea912d118a1c846a502d082845854a, type: 3}
+  m_Script: {fileID: 11500000, guid: c22a8b25130733746af8c9ac4c5d7453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Caster: {fileID: 0}
-  Target: {fileID: 0}
-  CardName: GEMINI
-  CardDescription: Gain a speed buff for 3s
-  Card: {fileID: 5738002559424483352, guid: 434e1e329bbcfa144b2114d0057d468d, type: 3}
-  Buff: {fileID: 6673589202514223143, guid: 7a623cc2f785e1d46b3803c7a89d68fa, type: 3}
+  Pickup: {fileID: 5889736995613076923, guid: 4f45d7c84df57d846b443c4d45d2a2c2, type: 3}
