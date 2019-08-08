@@ -13,7 +13,7 @@ public class ThrowingCard : Card
     void Update()
     {
         if(canMove)
-        transform.Translate(ProjectileSpeed * Time.deltaTime, 0, 0);
+            transform.Translate(ProjectileSpeed * Time.deltaTime, 0, 0);
     }
 
     public override void OnThrow()

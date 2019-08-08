@@ -144,5 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caster: {fileID: 0}
   Target: {fileID: 0}
-  Card: {fileID: 3389646886628586634}
+  Card: {fileID: 5738002559424483352, guid: 434e1e329bbcfa144b2114d0057d468d, type: 3}
   Buff: {fileID: 6673589202514223143, guid: 7a623cc2f785e1d46b3803c7a89d68fa, type: 3}

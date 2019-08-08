@@ -10,7 +10,8 @@ public class BuffApplier : ThrowingCard
     {
         if (Target == null) yield break;
         Target.health.TakeDamage(Damage);
-        Target.GetComponent<BuffManager>().Register(Buff);
+        Buff.Target = Target;
+        StartCoroutine(Target.GetComponent<BuffManager>().Register(Buff));
         yield return null;
     }
 }

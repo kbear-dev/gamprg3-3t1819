@@ -15,14 +15,15 @@ public class SelfBuff : Card
     protected override IEnumerator OnEffect()
     {
         Target = Caster;
+        Buff.Target = Target;
 
-        Caster.GetComponent<BuffManager>().Register(Buff);
+        StartCoroutine(Caster.GetComponent<BuffManager>().Register(Buff));
         yield return null;
-        Caster.GetComponent<CardThrow>().Deck.PoolCard(this);
+        Caster.GetComponent<CardThrow>().Deck.AddCard(this);
     }
 
-    private void OnEnable()
-    {
-        StartCoroutine(OnEffect());
-    }
+    //private void OnEnable()
+    //{
+    //    StartCoroutine(OnEffect());
+    //}
 }

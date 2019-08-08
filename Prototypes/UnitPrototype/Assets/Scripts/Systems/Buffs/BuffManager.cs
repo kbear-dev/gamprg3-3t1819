@@ -7,23 +7,28 @@ public class BuffManager : MonoBehaviour
 {
     private List<Buff> buffs = new List<Buff>();
 
-    public void Register(Buff buff)
+    public IEnumerator Register(Buff buff)
     {
-        if(!buffs.Contains(buff)) buffs.Add(buff);
-        else
+        Buff toAdd = Instantiate(buff, transform);
+        if (buffs.Find(s => s.GetType() == buff.GetType()))
         {
-            Remove(buff);
-            buffs.Add(buff);
+            Buff toRemove = buffs.Find(s => s.GetType() == buff.GetType());
+            toRemove.buffEnded.RemoveAllListeners();
+            Remove(toRemove);
+            yield return null;
         }
-        buff = Instantiate(buff, transform);
-        buff.buffEnded.AddListener(Remove);
-        ApplyBuff(buff);
+
+        buffs.Add(toAdd);        
+
+        toAdd.buffEnded.AddListener(Remove);
+        ApplyBuff(toAdd);
     }
 
     public void Remove(Buff buff)
     {
-        buffs.RemoveAll(s => s == buff);
-        //Debug.Log("removing buff");
+        buffs.RemoveAll(s => s.GetType() == buff.GetType());
+        buffs.TrimExcess();
+        //buff.buffEnded.RemoveAllListeners();
         StartCoroutine(buff.DestroyBuff());
     }
 
@@ -35,7 +40,6 @@ public class BuffManager : MonoBehaviour
 
     void ApplyBuff(Buff buff)
     {
-        buff.Target = GetComponent<Unit>();
         StartCoroutine(buff.Effect());
     }
 

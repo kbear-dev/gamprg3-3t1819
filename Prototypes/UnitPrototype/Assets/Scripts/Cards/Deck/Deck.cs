@@ -7,8 +7,6 @@ public class Deck : MonoBehaviour
 {
     public List<Card> Cards = new List<Card>();
 
-    /*[HideInInspector]*/ public List<Card> ActiveCards = new List<Card>();
-
     public int selectedCard { get; private set; }
 
     // Start is called before the first frame update
@@ -52,28 +50,6 @@ public class Deck : MonoBehaviour
     {
         if (Cards.Count == 0) return null;
         return Cards[selectedCard];
-    }
-
-    public Card GetCard()
-    {
-        if (Cards.Count == 0) return null;
-
-        Card toReturn = Cards[selectedCard];
-        Cards.Remove(toReturn);
-        Cards.TrimExcess();
-        ActiveCards.Add(toReturn);
-
-        if (!toReturn.gameObject.activeInHierarchy)
-            toReturn.gameObject.SetActive(true);
-        return toReturn;
-    }
-
-    public void PoolCard(Card toAdd)
-    {
-        ActiveCards.Remove(toAdd);
-        ActiveCards.TrimExcess();
-        Cards.Add(toAdd);
-        toAdd.gameObject.SetActive(false);
     }
 
     public void AddCard(Card toAdd)

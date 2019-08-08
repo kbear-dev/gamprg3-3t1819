@@ -13,7 +13,12 @@ public class SpeedChange : Buff
     {
         originalSpeed = Target.BaseMoveSpeed;
         Target.GetComponent<Unit>().SetMoveSpeed(originalSpeed + SpdStr);
-        yield return new WaitForSeconds(duration);
+        while (duration > 0)
+        {
+            if (willBeRemoved) yield break;
+            yield return new WaitForSeconds(Time.deltaTime);
+            duration -= Time.deltaTime;
+        }
         //StartCoroutine(Cleanup());
         buffEnded.Invoke(this);
     }

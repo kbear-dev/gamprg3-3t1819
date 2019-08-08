@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  PoisonDamage: 2
-  Duration: 1
+  PoisonDamage: 1
+  Duration: 3
   TickRate: 1

@@ -26,10 +26,14 @@ public class CardThrow : MonoBehaviour
 
     IEnumerator ThrowCard()
     {
-        Card toThrow = Instantiate(Deck.GetCurrentCard());
+        Card toThrow = Deck.GetCurrentCard();
 
         toThrow.Caster = GetComponent<Unit>();
         Vector3 newRot = transform.rotation.eulerAngles;
+
+        if(!toThrow.gameObject.activeInHierarchy)
+            toThrow = Instantiate(toThrow);
+
 
         toThrow.transform.position = ProjectileSpawn.position;
         toThrow.transform.rotation = Quaternion.Euler(newRot);
@@ -37,6 +41,8 @@ public class CardThrow : MonoBehaviour
         Deck.RemoveCurrentCard();
         yield return null;
         toThrow.OnThrow();
+
+        yield return null;
     }
 
     float GetMouseRotation()
