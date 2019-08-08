@@ -22,13 +22,14 @@ public class EnemyBullet : Projectile
         base.ProjectileMove();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle")) Destroy(gameObject);
 
         Player player = collision.gameObject.GetComponent<Player>();
         if (player == null) return;
 
-        player.TakeDamage(BulletDamage); 
+        player.TakeDamage(BulletDamage);
+        Destroy(gameObject);
     }
 }

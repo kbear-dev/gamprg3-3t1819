@@ -6,6 +6,7 @@ using UnityEngine;
 public class BossAttackState : BossState
 {
     public float RetreatAtHealth;
+    public float FireInterval;
 
     public override void Act()
     {
@@ -21,7 +22,7 @@ public class BossAttackState : BossState
                 return SwapState(0);
             }
 
-            if (!boss.hasBulletHellStarted) boss.StartBulletHell();
+            if (!boss.hasBulletHellStarted) boss.StartBulletHell(FireInterval);
             return this;
         }
         else

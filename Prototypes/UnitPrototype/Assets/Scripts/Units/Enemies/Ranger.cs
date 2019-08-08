@@ -22,8 +22,6 @@ public class Ranger : Enemy
 
         isTargetInRange = false;
         ai = GetComponent<AIPath>();
-
-        
     }
 
     // Update is called once per frame

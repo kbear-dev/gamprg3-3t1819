@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableStates:
   - {fileID: 11400000, guid: 7cfee5f6c9c6c51498b53337674bd54c, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ffb4b95b77194864fac3ebd227ff952d, type: 2}
   RetreatAtHealth: 30
+  FireInterval: 1.5
