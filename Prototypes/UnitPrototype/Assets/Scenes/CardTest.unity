@@ -1429,13 +1429,13 @@ PrefabInstance:
     - target: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
         type: 3}
       propertyPath: Cards.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
         type: 3}
       propertyPath: Cards.Array.data[0]
       value: 
-      objectReference: {fileID: 7057874853598168917, guid: 7dea36d26c4da9640bf41fbc9abf37bb,
+      objectReference: {fileID: 5889736995613076923, guid: 4f45d7c84df57d846b443c4d45d2a2c2,
         type: 3}
     - target: {fileID: 5668186188162184054, guid: 5797067b3cfd0274bb55548312794ec3,
         type: 3}
@@ -1443,6 +1443,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5738002559424483352, guid: 434e1e329bbcfa144b2114d0057d468d,
         type: 3}
+    - target: {fileID: 7423346908232037470, guid: 5797067b3cfd0274bb55548312794ec3,
+        type: 3}
+      propertyPath: isShielded
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5797067b3cfd0274bb55548312794ec3, type: 3}
 --- !u!1 &1113809914

@@ -11,9 +11,9 @@ public class Poison : Buff
     {
         for(int x = 0;x<Duration;x++)
         {
+            if (Target == null) break;
             yield return new WaitForSeconds(TickRate);
             Target.health.TakeDamage(PoisonDamage);
-            if (Target == null) break;
         }
         buffEnded.Invoke(this);
     }

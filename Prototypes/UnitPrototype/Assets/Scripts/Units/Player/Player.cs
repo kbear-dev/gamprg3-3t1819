@@ -13,6 +13,11 @@ public class Player : Unit
     protected override void Start()
     {
         base.Start();
+        if (!health.isShielded)
+            health.ShieldSprite.gameObject.SetActive(false);
+        else
+            health.ShieldSprite.gameObject.SetActive(true);
+
     }
 
     protected override void Update()
